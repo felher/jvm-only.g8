@@ -5,8 +5,14 @@ lazy val root = project
   .settings(
     name := "$name$",
     version := "0.1.0-SNAPSHOT",
-
     scalaVersion := scala3Version,
-
-    libraryDependencies += "org.scalameta" %% "munit" % "1.0.0" % Test
+    scalacOptions ++= Seq(
+      "-language:strictEquality",
+      "-source:future",
+      "-feature",
+      "-deprecation",
+      "-Xkind-projector:underscores",
+      "-Xmax-inlines:256",
+      "-Wall"
+    )
   )
