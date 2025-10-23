@@ -1,10 +1,10 @@
-val scala3Version = "3.7.0"
+val scala3Version = "3.7.3"
 
 lazy val root = project
   .in(file("."))
   .settings(
-    name := "$name$",
-    version := "0.1.0-SNAPSHOT",
+    name         := "$name$",
+    version      := "0.1.0-SNAPSHOT",
     scalaVersion := scala3Version,
     scalacOptions ++= Seq(
       "-language:strictEquality",
